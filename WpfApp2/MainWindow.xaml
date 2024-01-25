@@ -1,0 +1,85 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Icon="/01-shahmatnaya-doska-A4.jpg">
+    <Grid x:Name="MyGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="Play" Content="Play" Height="70" Width="200" FontSize="48" Click="Button_Click_1"/>
+                <!--<ListBox x:Name="text" Margin="10,10,0,59" Grid.Row="1" IsSynchronizedWithCurrentItem="True"/>-->
+                <!--<Button Content="Button" HorizontalAlignment="Left" Margin="34,134,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>-->
+            </Grid>
+        </DockPanel>
+        <DockPanel Grid.Column="1">
+            <DockPanel.Background>
+                <ImageBrush Stretch="Fill"  ImageSource="image/shahmatnaya-doska.jpg"/>
+            </DockPanel.Background>
+            <Grid x:Name="grid_Chess" Margin="10,15,9,10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                    <RowDefinition  Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image x:Name="wS1" Grid.Row="7" Grid.Column="5" Stretch="Uniform"  Source="image/wS.png" MouseDown="bS_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wS2" Grid.Row="7" Grid.Column="2" Stretch="Uniform"  Source="image/wS.png" MouseDown="bS_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wK"  Grid.Row="7" Grid.Column="3" Stretch="Uniform"  Source="image/wK.png" MouseDown="wK_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wL1" Grid.Row="7" Grid.Column="1" Stretch="Uniform"  Source="image/wL.png" MouseDown="bwL_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wL2" Grid.Row="7" Grid.Column="6" Stretch="Uniform"  Source="image/wL.png" MouseDown="bwL_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wF"  Grid.Row="7" Grid.Column="4" Stretch="Uniform"  Source="image/wF.png" MouseDown="wF_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wZ1" Grid.Row="7" Grid.Column="0" Stretch="Uniform"  Source="image/wZ.png" MouseDown="bwZ_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wZ2" Grid.Row="7" Grid.Column="7" Stretch="Uniform"  Source="image/wZ.png" MouseDown="bwZ_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP1" Grid.Row="6" Grid.Column="0" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP2" Grid.Row="6" Grid.Column="1" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP3" Grid.Row="6" Grid.Column="2" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP4" Grid.Row="6" Grid.Column="3" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP5" Grid.Row="6" Grid.Column="4" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP6" Grid.Row="6" Grid.Column="5" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP7" Grid.Row="6" Grid.Column="6" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="wP8" Grid.Row="6" Grid.Column="7" Stretch="Uniform"  Source="image/wP.png" MouseDown="wP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bS1" Grid.Row="0" Grid.Column="2" Stretch="Uniform"  Source="image/bS.png" MouseDown="bS_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bS2" Grid.Row="0" Grid.Column="5" Stretch="Uniform"  Source="image/bS.png" MouseDown="bS_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bK"  Grid.Row="0" Grid.Column="3" Stretch="Uniform"  Source="image/bK.png" MouseDown="bK_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bL1" Grid.Row="0" Grid.Column="1" Stretch="Uniform"  Source="image/bL.png" MouseDown="bwL_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bL2" Grid.Row="0" Grid.Column="6" Stretch="Uniform"  Source="image/bL.png" MouseDown="bwL_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bF"  Grid.Row="0" Grid.Column="4" Stretch="Uniform"  Source="image/bF.png" MouseDown="wF_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bZ1" Grid.Row="0" Grid.Column="0" Stretch="Uniform"  Source="image/bZ.png" Panel.ZIndex="0" MouseDown="bwZ_MouseDown"/>
+                <Image x:Name="bZ2" Grid.Row="0" Grid.Column="7" Stretch="Uniform"  Source="image/bZ.png" Panel.ZIndex="0" MouseDown="bwZ_MouseDown"/>
+                <Image x:Name="bP1" Grid.Row="1" Grid.Column="0" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP2" Grid.Row="1" Grid.Column="1" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP3" Grid.Row="1" Grid.Column="2" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP4" Grid.Row="1" Grid.Column="3" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP5" Grid.Row="1" Grid.Column="4" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP6" Grid.Row="1" Grid.Column="5" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP7" Grid.Row="1" Grid.Column="6" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+                <Image x:Name="bP8" Grid.Row="1" Grid.Column="7" Stretch="Uniform"  Source="image/bP.png" MouseDown="bP_MouseDown" Panel.ZIndex="0"/>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

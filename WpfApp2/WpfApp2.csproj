@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="01-shahmatnaya-doska-A4.jpg" />
+    <None Remove="bF.png" />
+    <None Remove="bK.png" />
+    <None Remove="bL.png" />
+    <None Remove="bP.png" />
+    <None Remove="bS.png" />
+    <None Remove="bZ.png" />
+    <None Remove="shahmatnaya-doska.jpg" />
+    <None Remove="wF.png" />
+    <None Remove="wK.png" />
+    <None Remove="wL.png" />
+    <None Remove="wP.png" />
+    <None Remove="wS.png" />
+    <None Remove="wZ.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="01-shahmatnaya-doska-A4.jpg" />
+    <Resource Include="image\bF.png" />
+    <Resource Include="image\bK.png" />
+    <Resource Include="image\bL.png" />
+    <Resource Include="image\bP.png" />
+    <Resource Include="image\bS.png" />
+    <Resource Include="image\bZ.png" />
+    <Resource Include="image\shahmatnaya-doska.jpg" />
+    <Resource Include="image\wF.png" />
+    <Resource Include="image\wK.png" />
+    <Resource Include="image\wL.png" />
+    <Resource Include="image\wP.png" />
+    <Resource Include="image\wS.png" />
+    <Resource Include="image\wZ.png" />
+  </ItemGroup>
+</Project>
